@@ -1,0 +1,11 @@
+
+__pycache__/
+*.pyc
+*.ipynb_checkpoints/
+.env
+myenv/
+*.pdf
+*.csv
+.DS_Store
+myenv
+vector_cache/
