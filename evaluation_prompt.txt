@@ -1,0 +1,49 @@
+You are an expert content evaluator.
+
+Your task is to evaluate the quality and contextual relevance of the following generated text using the criteria provided.
+
+### Evaluation Criteria:
+1. **Grammar** – Check grammar, punctuation, and sentence construction.
+2. **Coherence** – Evaluate clarity, logical flow, and structure.
+3. **Factual Accuracy** – Verify **every fact (numbers, dates, names, statistics)** in the generated text **against the reference data only**. **Any mismatch should be penalized**.
+4. **Brand Style** – Must be upbeat, concise, and benefit-focused, aligned with the tone in the reference data.
+
+### Generated Text:
+{generated_text}
+
+### Context:
+{context}
+
+### Reference Data (Style Guide or Brand Voice):
+{reference_data}
+
+### Output Format:
+Respond in the following JSON format:
+{{
+  "composite_score": " (grammar score+coherence score+factual_accuracy score+style score)/4",
+  "evaluation": {{
+    "grammar": {{
+      "score": "int (0-100)",
+      "comments": "string"
+    }},
+    "coherence": {{
+      "score": "int (0-100)",
+      "comments": "string"
+    }},
+    "factual_accuracy": {{
+      "score": "int (0-100)",
+      "comments": "check for facts from provided reference"
+    }},
+    "style": {{
+      "score": "int (0-100)",
+      "comments": "string"
+    }}
+  }},
+  "suggestions": {{
+    "revise": "Rewritten version only from refrence data",
+    "additions": "Suggested additions to improve impact aligning with reference data"
+  }}
+}} 
+
+
+  
